@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitShow Official Show Codes</title>
+ <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        /* Classic Windows 98 Font & Color Theme */
+        body {
+            background-color: #008080; /* Win98 Teal Desktop */
+            font-family: "Tahoma", "MS Sans Serif", sans-serif;
+            font-size: 13px;
+            margin: 20px;
+            color: #000000;
+        }
+
+        /* 3D Chiseled Window Window Frame */
+        .window {
+            background-color: #c0c0c0;
+            width: 750px;
+            margin: 0 auto;
+            border-top: 2px solid #ffffff;
+            border-left: 2px solid #ffffff;
+            border-bottom: 2px solid #808 gray;
+            border-right: 2px solid #808080;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            padding: 3px;
+        }
+
+        /* Classic Blue Title Bar Gradient */
+        .title-bar {
+            background: linear-gradient(90deg, #000080, #1084d0);
+            padding: 4px 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .title-text {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .title-btn {
+            background-color: #c0c0c0;
+            border-top: 1px solid #ffffff;
+            border-left: 1px solid #ffffff;
+            border-bottom: 1px solid #000000;
+            border-right: 1px solid #000000;
+            font-weight: bold;
+            font-size: 11px;
+            width: 16px;
+            height: 14px;
+            text-align: center;
+            line-height: 12px;
+            cursor: pointer;
+        }
+
+        /* Application Working Panel Container */
+        .content {
+            padding: 15px;
+        }
+
+        .fieldset {
+            border-top: 1px solid #808080;
+            border-left: 1px solid #808080;
+            border-bottom: 1px solid #ffffff;
+            border-right: 1px solid #ffffff;
+            padding: 12px;
+            margin-bottom: 15px;
+        }
+
+        .legend {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        /* Text Input Control Configurations */
+        input[type="text"] {
+            border-bottom: 1px solid #ffffff;
+            border-right: 1px solid #ffffff;
+            border-top: 1px solid #808080;
+            border-left: 1px solid #808080;
+            background-color: #ffffff;
+            padding: 4px;
+            font-size: 13px;
+            outline: none;
+        }
+
+        /* 3D Button Press Layout Mechanics */
+        button {
+            background-color: #c0c0c0;
+            border-top: 1px solid #ffffff;
+            border-left: 1px solid #ffffff;
+            border-bottom: 1px solid #000000;
+            border-right: 1px solid #000000;
+            padding: 4px 12px;
+            font-size: 13px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        button:active {
+            border-bottom: 1px solid #ffffff;
+            border-right: 1px solid #ffffff;
+            border-top: 1px solid #000000;
+            border-left: 1px solid #000000;
+            padding: 5px 11px 3px 13px;
+        }
+
+        /* Folder Data Grid Layout */
+        .directory-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            border-top: 1px solid #808080;
+            border-left: 1px solid #808080;
+            border-bottom: 1px solid #ffffff;
+            border-right: 1px solid #ffffff;
+        }
+
+        .directory-table th {
+            background-color: #c0c0c0;
+            border: 1px solid #808080;
+            padding: 5px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .directory-table td {
+            border: 1px solid #e0e0e0;
+            padding: 6px;
+            font-family: monospace;
+            font-size: 12px;
+        }
+
+        .directory-table tr:hover {
+            background-color: #000080;
+            color: #ffffff;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .copy-notice {
+            color: #000080;
+            font-size: 11px;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="window">
+    <!-- Blue Header Window Panel Frame -->
+    <div class="title-bar">
+        <div class="title-text">BitShow_Official_Shows_0w91</div>
+        <div class="title-btn" onclick="alert('File Explorer cannot be closed from this terminal.')">X</div>
+    </div>
+
+   
+        <!-- Section B: Directory Database File Registry Grid -->
+        <div class="search-container">
+            <div>
+                <span style="font-weight: bold; margin-right: 5px;">Search Library:</span>
+                <input type="text" id="searchInput" onkeyup="filterDirectory()" placeholder="Filter keys or titles...">
+            </div>
+            <div class="copy-notice" id="copyNotice">✔ Code copied to clipboard!</div>
+        </div>
+
+        <table class="directory-table">
+            <thead>
+                <tr>
+                    <th style="width: 35%;">Segment/Show Label</th>
+                    <th style="width: 25%;">Audio Track ID</th>
+                    <th style="width: 25%;">10-Digit Replay Key</th>
+                    <th style="width: 15%;">Code Here!</th>
+                </tr>
+            </thead>
+            <tbody id="directoryBody">
+                <!-- Hardcoded Core Tests Database Fallbacks -->
+                <tr>
+                    <td>First Test</td>
+                    <td>73521475638994</td>
+                    <td style="color: #008000; font-weight: bold;">4259845947</td>
+                    <td><button onclick="copyToClipboard('4259845947')">Copy</button></td>
+                </tr>
+                         </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    // Handles reading data table strings and executing standard copy commands
+    function copyToClipboard(textValue) {
+        navigator.clipboard.writeText("!play " + textValue).then(() => {
+            const notice = document.getElementById("copyNotice");
+            notice.style.display = "block";
+            setTimeout(() => { notice.style.display = "none"; }, 2000);
+        });
+    }
+
+    // Handles adding dynamic user elements directly to the browser storage lines
+    function addTapeEntry() {
+        const name = document.getElementById("trackName").value.trim();
+        const audio = document.getElementById("audioId").value.trim();
+        const code = document.getElementById("showCode").value.trim();
+
+        if (name === "" || audio === "" || code === "") {
+            alert("Error: All fields must contain values before saving to the directory.");
+            return;
+        }
+
+        const tbody = document.getElementById("directoryBody");
+        const row = document.createElement("tr");
+
+        row.innerHTML = `
+            <td>${name}</td>
+            <td>${audio}</td>
+            <td style="color: #008000; font-weight: bold;">${code}</td>
+            <td><button onclick="copyToClipboard('${code}')">Copy</button></td>
+        `;
+
+        tbody.appendChild(row);
+
+        // Reset data entry box lines cleanly
+        document.getElementById("trackName").value = "";
+        document.getElementById("audioId").value = "";
+        document.getElementById("showCode").value = "";
+    }
+
+    // High frequency search matrix filtering engine
+    function filterDirectory() {
+        const query = document.getElementById("searchInput").value.toLowerCase();
+        const rows = document.getElementById("directoryBody").getElementsByTagName("tr");
+
+        for (let i = 0; i < rows.length; i++) {
+            const rowText = rows[i].innerText.toLowerCase();
+            if (rowText.includes(query)) {
+                rows[i].style.display = "";
+            } else {
+                rows[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
